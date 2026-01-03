@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/*左側の操作エリア*/
+.left-panel {
+    width: 60%; /* 操作エリアの幅を60%に設定 */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 2px solid #eee;
+}
+
+/* 右側のリストエリア */
+.complete-container {
+    width: 40%; /* リストエリアの幅を40%に設定 */
+    padding: 20px;
+    background-color: #fafafa;
+    overflow-y: auto; /* リストが増えたらスクロール可能に */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100px;
+}
+
+.input-text {
+    margin-left: auto;
+    font-size: 3rem;
+    border: none;
+}
+
+.order-number {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(3, auto);*/
+    gap: 10px;
+}
+
+/* リスト部分のスタイル（見た目を整えるため追加） */
+.completed-area ul {
+    list-style: none;
+    padding: 0;
+}
+
+.completed-area li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.completed-area li p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.order-number button, .completed-area button {
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* iPhoneでのタップ操作性を高めるためのスタイル */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.order-number button:active {
+    background-color: #e0e0e0;
+}
+
+.order-number button:hover {
+    background-color: #eee;
+}
+
+.completed-area button:hover {
+    background-color: #eee;
+}
+
+.completed-area button:active {
+    background-color: #e0e0e0;
+}
+
+Footer {
+    text-align: right;
+    padding-top: 20px;
+}
+
+Footer button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+Footer button:hover {
+    background-color: #eee;
+}
