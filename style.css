@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*左側の操作エリア*/
@@ -111,4 +111,40 @@ Footer button {
 
 Footer button:hover {
     background-color: #eee;
+}
+
+/* 画面幅が 768px 以下の時（スマホ・タブレット向け） */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* 左右並びを上下並びに変更 */
+        height: auto;
+    }
+
+    .left-panel, .complete-container {
+        width: 100%; /* 幅を画面いっぱいにする */
+        box-sizing: border-box; /* パディングを含めた幅計算 */
+        border-right: none;
+    }
+
+    .left-panel {
+        border-bottom: 2px solid #eee; /* 境界線を下に変更 */
+    }
+
+    /* キーパッドのボタンを少し大きくして押しやすくする */
+    .order-number {
+        grid-template-columns: repeat(3, 1fr); /* スマホなら3列の方が見やすい場合が多い */
+    }
+
+    .order-number button {
+        padding: 15px; /* スマホに適したサイズ感 */
+        font-size: 1.2rem;
+    }
+
+    .header img {
+        width: 80px; /* ロゴを少し小さく */
+    }
+
+    .input-text {
+        font-size: 2rem; /* 入力文字サイズを調整 */
+    }
 }
