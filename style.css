@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     padding: 20px;
     border-right: 2px solid #eee;
+    color: black;
 }
 
 /* 右側のリストエリア */
@@ -37,6 +38,10 @@ body {
     margin-left: auto;
     font-size: 3rem;
     border: none;
+    min-height: 1.2em; /* 文字の高さ分（3rem相当）をあらかじめ確保 */
+    display: flex;     /* 垂直方向の中央揃えを確実にするため */
+    align-items: center;
+
 }
 
 .order-number {
