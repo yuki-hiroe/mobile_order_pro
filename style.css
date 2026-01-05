@@ -17,6 +17,7 @@ body {
 .complete-container {
     width: 40%; /* リストエリアの幅を40%に設定 */
     padding: 20px;
+    flex-grow: 1;
     background-color: #fafafa;
     overflow-y: auto; /* リストが増えたらスクロール可能に */
 }
@@ -131,6 +132,38 @@ body {
     background-color: #eee;
 }
 
+@media screen and (max-width: 1000px) {
+    .header img {
+        width: 70px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header {
+        height: 50px; /* 高さを抑える */
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 0.8rem; /* 文字を小さくする */
+    }
+
+    .order-number {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .footer-area {
+        padding-top: 10px;
+    }
+
+    /* 削除ボタン自体のサイズを小さくする場合 */
+    .delete-button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
 /* 画面幅が 768px 以下の時（スマホ・タブレット向け） */
 @media screen and (max-width: 768px) {
     body {
@@ -145,7 +178,10 @@ body {
     }
 
     .left-panel {
-        border-bottom: 2px solid #eee; /* 境界線を下に変更 */
+        /* 削除ボタンが見切れないように、パディングやマージンを調整 */
+        padding-bottom: 20px;
+        overflow-y: auto; /* コンテンツが多い場合はスクロール可能にする */
+        /*border-bottom: 2px solid #eee; !* 境界線を下に変更 *!*/
     }
 
     /* キーパッドのボタンを少し大きくして押しやすくする */
@@ -164,5 +200,18 @@ body {
 
     .input-text {
         font-size: 2rem; /* 入力文字サイズを調整 */
+    }
+
+    .complete-container {
+        font-size: 0.6rem;
+    }
+
+    .complete-container h2 {
+        font-size: 5px;
+    }
+
+    .complete-container button {
+        padding: 10px;
+        font-size: 0.5rem;
     }
 }

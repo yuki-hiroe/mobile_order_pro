@@ -81,9 +81,9 @@ export const Mobile = () => {
     const keys = ['M', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
     return (
-        <div style={{ display: 'flex', minHeight: '100vh' }}>
+        <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
             {/*画面左側*/}
-            <div className={"left-panel"}>
+            <div className={"left-panel"} style={{ width: '60%', flexShrink: 0, borderRight: '1px solid #ddd', display: 'flex', flexDirection: 'column'}}>
                 <div className={"header"}>
                     <img src="https://emotion-tech.co.jp/wp-content/uploads/2023/06/gongcha_logo_02.png" alt="ゴンチャ" />
                     <h1 className={"input-text"}>{displayText}</h1>
@@ -97,18 +97,18 @@ export const Mobile = () => {
 
                     </div>
                 </div>
-                <footer className={'footer-area'} style={{ marginTop: 'auto' }}>
+                <footer className={'footer-area'} style={{ marginTop: 0 }}>
                     <button id="delete" onClick={handleDelete}>削除</button>
                 </footer>
             </div>
 
             {/*画面の右側*/}
-            <div className={"complete-container"}>
+            <div className={"complete-container"} style={{ flexGrow: 1, overflowY: 'auto', padding: '20px' }}>
                 <h1>呼び出し中</h1>
-                <ul id="completed-list" style={{ listStyle: 'none', padding: 0 }}>
+                <ul id="completed-list" style={{ listStyle: 'none', padding: 0, flexWrap: 'wrap', gap: '10px' }}>
                     {orders.map(order => (
                         <li key={order.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', padding: '10px', borderBottom: '1px solid #ddd' }}>
-                            <h2 style={{ fontSize: '3rem', margin: 0 }}>{order.order_number}</h2>
+                            <h2 style={{ fontSize: '1.5rem', margin: 0 }}>{order.order_number}</h2>
                             <button onClick={() => handleComplete(order.id)}>受渡済</button>
                         </li>
                     ))}
