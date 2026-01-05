@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    display: flex;
     min-height: 100vh;
 }
 
@@ -20,6 +19,19 @@ body {
     padding: 20px;
     background-color: #fafafa;
     overflow-y: auto; /* リストが増えたらスクロール可能に */
+}
+
+.complete-container button {
+    padding: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.complete-container button:hover {
+    background-color: #eee;
 }
 
 .header {
@@ -100,12 +112,12 @@ body {
     background-color: #e0e0e0;
 }
 
-Footer {
+.footer-area {
     text-align: right;
     padding-top: 20px;
 }
 
-Footer button {
+.footer-area button {
     padding: 10px 20px;
     font-size: 1.5rem;
     border-radius: 8px;
@@ -115,7 +127,7 @@ Footer button {
     cursor: pointer;
 }
 
-Footer button:hover {
+.footer-area button:hover {
     background-color: #eee;
 }
 

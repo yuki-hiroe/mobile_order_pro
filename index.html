@@ -1,47 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MobileOrder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--画面左側-->
-<div class="left-panel">
-    <div class="header">
-        <img src="https://emotion-tech.co.jp/wp-content/uploads/2023/06/gongcha_logo_02.png" alt="ゴンチャ">
-        <h1 id="display" class="input-text"></h1>
-    </div>
-    <div class="main">
-        <div id="input-button" class="order-number">
-            <button>M</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
-            <button id="submit" type="submit">OK</button>
-        </div>
-    </div>
-    <Footer>
-        <button id="delete" type="submit">削除</button>
-    </Footer>
-</div>
-<!--画面の右側-->
-<div class="complete-container">
-    <div class="completed">
-        <h1>呼び出し中</h1>
-    </div>
-    <div class="completed-area">
-        <ul id="completed-list"></ul>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="index.js"></script>
+<div id="root"></div>
+<script type="module" src="./index.jsx"></script>
 </body>
 </html>
